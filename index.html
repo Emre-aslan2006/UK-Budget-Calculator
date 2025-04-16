@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UK Budget Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>UK Budget Calculator 💷</h1>
+
+    <label class="toggle">
+      <input type="checkbox" id="darkModeToggle" />
+      <span>Dark Mode</span>
+    </label>
+
+    <input type="number" id="budgetInput" placeholder="Enter annual salary in £..." />
+
+    <div class="inputs">
+      <label>Rent £<input type="number" class="expense" id="Rent" /></label>
+      <label>Food £<input type="number" class="expense" id="Food" /></label>
+      <label>Utilities £<input type="number" class="expense" id="Utilities" /></label>
+      <label>Transportation £<input type="number" class="expense" id="Transportation" /></label>
+      <label>Entertainment £<input type="number" class="expense" id="Entertainment" /></label>
+      <label>Unplanned £<input type="number" class="expense" id="Unplanned" /></label>
+    </div>
+
+    <div id="customFields"></div>
+
+    <button id="addCustom">Add Custom Category</button>
+    <input type="text" id="customName" placeholder="e.g., Gym, Pets" />
+
+    <label style="margin-top: 10px;">Debt Repayment (optional) £
+      <input type="number" id="Debt" placeholder="Monthly debt repayment..." />
+    </label>
+
+    <button id="calculateBtn">Calculate</button>
+    <button id="startOver">Start Over</button>
+    <button id="exportCSV">Export to CSV</button>
+
+    <div id="results" class="results"></div>
+    <div id="monthlyResults" class="results"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
